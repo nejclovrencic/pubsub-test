@@ -24,7 +24,7 @@ const publishMessageToChannel = async (channel, message) => {
         return res.json();
     }
 
-    await Promise.all(clientUrls.map((url) => sendRequest(url, message).catch(e => e)));
+    await Promise.all(clientUrls.map((url) => sendRequest(url, { message }).catch(e => e)));
 }
 
 

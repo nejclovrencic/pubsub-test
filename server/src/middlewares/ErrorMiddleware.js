@@ -15,7 +15,6 @@ handleError = (err) => {
             });
         }
         
-        
         return { error: 'INVALID_PARAMS', message: errorDetails || 'Unknown error', status: 400 };
     } else {
         return { error: 'INTERNAL_SERVER_ERROR', message: 'Unknown error', status: 500 };
