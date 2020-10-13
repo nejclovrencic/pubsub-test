@@ -1,0 +1,9 @@
+This project contains two sub-projects - cli and server. They simulate a simple publish/subscribe mechanism using HTTP.
+
+Server (publisher) has three endpoints:
+
+1. /subscribe - accepts channel (string) and clientUrl (string), and saves this data to redis
+2. /unsubscribe - same as above, but removes data from redis
+3. /publish - fetches all clientUrls for channel from redis, and uses HTTP POST to send a request body to all clientUrls
+
+CLI - cli again has HTTP SERVER included, which accepts messages from publisher, and logs them to console. It is started with "node src/index.js channelName". when started it'll do a HTTP call to publisher, in order to subscribe to "channelName". After it subscribes, it'll wait for any incoming messages.
