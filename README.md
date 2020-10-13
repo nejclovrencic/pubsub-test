@@ -1,7 +1,7 @@
 # PUBSUB
-This project contains two sub-projects - **cli** and **server**. They simulate a simple publish/subscribe mechanism using HTTP. Under the hood, both projects run an express server, and do HTTP requests using node-fetch.
+This project contains two sub-projects - **publisher** and **subscriber**. They simulate a simple publish/subscribe mechanism using HTTP. Under the hood, both projects run express server, and do HTTP requests using node-fetch.
 
-### Server (publisher)
+### Publisher
 Publisher containts three endpoints:
 ```
 1. /subscribe - accepts channel (string) and clientUrl (string), and saves this data to redis set
@@ -9,7 +9,7 @@ Publisher containts three endpoints:
 3. /publish - accepts channel (string) and message (any), then fetches all client urls for specified channel from redis, and uses HTTP POST to send a request body to all client urls
 ```
 
-### CLI (subscriber)
+### Subscriber
 
 Subscriber starts express server, which is ready to accept messages from publisher. When message is received, it logs it to console. 
 
