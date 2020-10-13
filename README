@@ -1,9 +1,16 @@
-This project contains two sub-projects - cli and server. They simulate a simple publish/subscribe mechanism using HTTP.
+# PUBSUB
+This project contains two sub-projects - **cli** and **server**. They simulate a simple publish/subscribe mechanism using HTTP. Under the hood, both projects run an express server, and do HTTP requests using node-fetch.
 
-Server (publisher) has three endpoints:
+### Server (publisher)
+Publisher containts three endpoints:
+```
+1. /subscribe - accepts channel (string) and clientUrl (string), and saves this data to redis set
+2. /unsubscribe - same as above, but removes data from redis set
+3. /publish - accepts channel (string) and message (any), then fetches all client urls for specified channel from redis, and uses HTTP POST to send a request body to all client urls
+```
 
-1. /subscribe - accepts channel (string) and clientUrl (string), and saves this data to redis
-2. /unsubscribe - same as above, but removes data from redis
-3. /publish - fetches all clientUrls for channel from redis, and uses HTTP POST to send a request body to all clientUrls
+### CLI (subscriber)
 
-CLI - cli again has HTTP SERVER included, which accepts messages from publisher, and logs them to console. It is started with "node src/index.js channelName". when started it'll do a HTTP call to publisher, in order to subscribe to "channelName". After it subscribes, it'll wait for any incoming messages.
+Subscriber starts express server, which is ready to accept messages from publisher. When message is received, it logs it to console. 
+
+Subscriber is started with ```node src/index.js channelName```. Parameter ```channelName``` can of course have any value, as it's the name of a channel we're subscribing to. When started, subscriber will use HTTP POST to subscribe to a provided channel.
