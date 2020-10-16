@@ -1,0 +1,6 @@
+{
+  "watch": ["*"],
+  "ext": "go",
+  "exec": "go run main.go || exit 1",
+  "signal": "SIGTERM"
+}
