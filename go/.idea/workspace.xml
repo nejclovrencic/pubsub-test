@@ -20,21 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="522cf0e6-cfda-4807-8ff9-125cc1b3b5b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../publisher/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/src/middlewares/ErrorMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/src/routers/HealthRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/src/routers/PubSubRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/src/routers/validation/ChannelValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/src/services/PubSubService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../publisher/test/ErrorMiddleware.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../subscriber/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../subscriber/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../subscriber/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../subscriber/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../subscriber/src/routers/PubSubRouter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/services/pubsub_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/services/pubsub_service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +56,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/publisher/routers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,6 +70,7 @@
       <recent name="$PROJECT_DIR$/publisher/db" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/publisher/routers" />
     </key>
   </component>

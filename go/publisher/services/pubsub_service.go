@@ -41,7 +41,6 @@ func FetchRssAndSendMessage(url string) {
 
 	for _, item := range feed.Items {
 		city := strings.Split(item.GUID, "_")[0]
-		fmt.Println(city)
 		go PublishMessageToChannel(strings.ToLower(city), item.Description)
 	}
 }

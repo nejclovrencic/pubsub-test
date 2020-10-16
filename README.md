@@ -10,14 +10,3 @@ Publisher containts three endpoints:
 ```
 
 Additionally, publisher will fetch RSS Meteo feed for Europe every 60 seconds, and publish data of each city.
-
-### Subscriber
-
-Subscriber starts express server, which is ready to accept messages from publisher. When message is received, it logs it to console. 
-
-Subscriber is started with ```npm start channelName```. Parameter ```channelName``` can of course have any value, as it's the name of a channel we're subscribing to. When started, subscriber will use HTTP POST to subscribe to a provided channel.
-
-
-### Example
-
-Starting publisher with ```npm start``` and starting subscriber with ```npm start tirana```, will result in subscriber receiving weather description for Tirana, every 60 seconds.
